@@ -1,20 +1,54 @@
-* {
-  margin: 0%;
-  padding: 0.5%;
+/* Import */
+@font-face {
+  font-family: "StarWars";
+  src: url(./assets/Font/STARWARS.eot) format("eot");
+  src: url(./assets/Font/STARWARS.svg) format("svg");
+  src: url(./assets/Font/STARWARS.ttf) format("ttf");
+  src: url(./assets/Font/STARWARS.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
-
+/* paleta personalizada */
+:root {
+  --main-dark: #590f15;
+  --main-medium: #bf1f2c;
+  --main-fuente2: #f2b90c;
+  --main-fuente: #f2a30f;
+  --main-borde: #f28e13;
+}
+/* reset gral */
+* {
+  padding: 0%;
+  margin: 0%;
+  text-align: center;
+  font-family: "StarWars";
+}
+body {
+  background-color: black;
+}
 header {
   display: flex;
   align-items: center;
-  background-color: rgba(49, 155, 49, 0.842);
-  height: 70px;
+  background: url(./assets/star-wars-millennium-falcon.jpg) no-repeat center fixed;
+  background-size: cover;
+  height: 100px;
+  width: auto;
   justify-content: space-between;
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+  padding: 8%;
+  margin: -1% -1% 1% -1%;
 }
 /* navbar */
 .icon {
-  width: 100px;
+  width: auto;
   height: 80px;
-  justify-self: left;
+  margin: -100%;
+}
+h1 {
+  color: var(--main-fuente);
+  background-color: transparent;
 }
 nav {
   display: flex;
@@ -23,8 +57,28 @@ nav {
 li {
   font-size: 1.2em;
   text-decoration: none;
-  display: inline-block;
+  display: block;
+  flex-direction: column;
 }
 li a {
-  color: blueviolet;
+  color: var(--main-borde);
+}
+/* cards */
+h2 {
+  color: var(--main-medium);
+  margin: 5%;
+}
+main {
+  display: flex;
+  margin: 5%;
+  flex-wrap: wrap;
+}
+main .card {
+  background-color: chartreuse;
+  margin: 3%;
+}
+
+/* footer */
+footer {
+  color: var(--main-fuente);
 }
