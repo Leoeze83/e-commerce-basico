@@ -8,7 +8,9 @@
   font-weight: normal;
   font-style: normal;
 }
+
 /* paleta personalizada */
+
 :root {
   --main-dark: #590f15;
   --main-medium: #bf1f2c;
@@ -16,40 +18,50 @@
   --main-fuente: #f2a30f;
   --main-borde: #f28e13;
   --main-hover: rgb(167, 208, 224);
+  --main-button: #0084ff;
 }
+
 /* reset gral */
+
 * {
   padding: 0%;
   margin: 0%;
   text-align: center;
   font-family: "StarWars";
+  justify-content: center;
 }
 body {
   background-color: rgb(15, 15, 15);
 }
 
 /* navbar */
+
 header {
   display: flex;
+  padding: 20px;
   align-items: center;
   justify-content: space-between;
-  height: 105px;
+  height: 170px;
   width: auto;
   background-color: rgb(0, 0, 0);
-  padding: 5%;
   margin-top: 20px;
   /* position: sticky;
   z-index: 10;
   top: 10px; */
 }
-
+.fa-bars {
+  color: white;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+nav i:hover {
+  color: rgb(167, 208, 224);
+  text-shadow: 0 0 19px #ff0000, 0 0 30px #0084ff;
+}
 .icon {
   width: auto;
   height: 110px;
 }
-/* .icon:hover {
- averiguar como intercambiar un icono cuando uso el hover
-} */
 
 h1 {
   color: var(--main-fuente);
@@ -66,18 +78,27 @@ li a {
   padding: 1%;
   text-decoration: none;
 }
-a:hover {
+.menu:hover {
   color: rgb(167, 208, 224);
+  text-shadow: 0 0 19px #ff0000, 0 0 30px #0084ff;
 }
+
 /* cards */
+
 h2 {
   color: rgb(167, 208, 224);
   margin-bottom: 2.5%;
   margin-top: 2%;
   font-size: 2.4em;
 }
-
-.cards {
+.favorite {
+  color: var(--main-medium);
+}
+.favorite:hover {
+  color: var(--main-fuente2);
+  cursor: pointer;
+}
+.products {
   display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
@@ -86,10 +107,30 @@ h2 {
   margin: 2%;
   align-items: center;
   padding: 1%;
-  box-shadow: 4px 4px 6px 1px var(--main-medium);
+  box-shadow: 4px 4px 7px 2px var(--main-medium);
 }
 .card p {
   font-size: 20px;
+}
+.buy {
+  text-decoration: none;
+  box-shadow: 3px 1px 4px 2px #0084ff;
+  border: none;
+  border-radius: 3px;
+  width: 120px;
+  height: 35px;
+  text-align: center;
+  background-color: rgba(128, 128, 128, 0.287);
+}
+
+a {
+  color: var(--main-medium);
+  size: 15px;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--main-borde);
+  text-decoration: none;
 }
 
 /* carrousel */
@@ -107,4 +148,7 @@ h2 {
 footer {
   color: var(--main-fuente);
   margin-top: 5%;
+  text-shadow: 0 0 15px #ff0000, 0 0 30px #0084ff;
 }
+
+/* media queries */
